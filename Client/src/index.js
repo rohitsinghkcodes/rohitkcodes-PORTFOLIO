@@ -4,9 +4,6 @@ import "./Styling/animation.css";
 import "./Styling/footer.css";
 import "./Styling/homePage.css";
 import "./Styling/pnf.css";
-
-
-import "./Styling/HomePageComponents/Page2_tech.css";
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";

@@ -3,7 +3,7 @@ import frontend from "../../Images/icons/frontend.png";
 import backend from "../../Images/icons/backend.png";
 import swd from "../../Images/icons/swd.png";
 import flutter from "../../Images/icons/flutter.png";
-import { techList } from "../../Components/Helpers/techList.js";
+import { techList } from "../../Helpers/techList.js";
 import "../../Styling/HomePageComponents/Page1_skills.css";
 const Page1 = () => {
   return (
@@ -80,11 +80,17 @@ const Page1 = () => {
 
         <div className="row mt-4 d-flex justify-content-center">
           {/* <h3>Tools & Technologies</h3> */}
-          {techList.map((m,index) => (
-            <div className="ring" key={index}>
-              <div className="ring2">
-                <p>{m}</p>
-              </div>
+          {techList.map((m, index) => (
+            // <div className="ring" key={index}>
+            //   <div className="ring2">
+            //     <p>{m}</p>
+            //   </div>
+            // </div>
+
+            <div
+              className=" techs"
+            >
+              <p className="tech-icons  ">{m}</p>
             </div>
           ))}
         </div>

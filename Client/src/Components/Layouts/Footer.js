@@ -8,8 +8,7 @@ import {
   FaHackerrank,
 } from "react-icons/fa";
 import { SiLeetcode, SiStopstalk } from "react-icons/si";
-import { SMLinks } from "../Helpers/socialMediaLinks.js";
-import dp from "../../Images/img2.png";
+import { SMLinks } from "../../Helpers/socialMediaLinks.js";
 
 const Footer = () => {
   return (

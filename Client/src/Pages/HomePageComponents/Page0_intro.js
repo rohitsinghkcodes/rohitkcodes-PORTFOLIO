@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import dp from "../../Images/img2.png";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaLinkedinIn, FaGithub,FaPinterest } from "react-icons/fa";
-import { SMLinks } from "../../Components/Helpers/socialMediaLinks.js";
+import { SMLinks } from "../../Helpers/socialMediaLinks.js";
 import "../../Styling/HomePageComponents/Page0_intro.css";
 
 
@@ -47,16 +47,16 @@ const Page0 = () => {
             {/* Social Media */}
             <div className="sm-container">
               <Link to={SMLinks.instagram}>
-                <FaInstagram size="24px" className="social-icons smicon" />
+                <FaInstagram className="social-icons iconsize smicon" />
               </Link>
               <Link to={SMLinks.linkedin}>
-                <FaLinkedinIn size="24px" className="social-icons smicon" />
+                <FaLinkedinIn className="social-icons iconsize smicon" />
               </Link>
               <Link to={SMLinks.github}>
-                <FaGithub size="24px" className="social-icons smicon" />
+                <FaGithub className="social-icons iconsize smicon" />
               </Link>
               <Link to={SMLinks.github}>
-                <FaPinterest size="24px" className="social-icons" />
+                <FaPinterest  className="social-icons iconsize" />
               </Link>
             </div>
           </div>

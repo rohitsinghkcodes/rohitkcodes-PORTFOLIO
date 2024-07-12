@@ -2,27 +2,32 @@ import React, { useEffect, useState } from "react";
 import "../../Styling/HomePageComponents/Page3_projects.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { IoGlobe } from "react-icons/io5";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+import { projectList } from "../../Helpers/projectList.js";
+import { DNA } from "react-loader-spinner";
 
 const Page2 = () => {
   const [projects, setProjects] = useState([]);
+  const [show, setShow] = useState(false);
 
   const fetchMainProjects = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/projects/main-projects"
+        "https://rohitkcodes-server.onrender.com/api/projects/main-projects"
       );
       if (response.data.success) {
+        setShow(true);
         setProjects(response.data.projects);
       } else {
+        // if not fetched from the api-fetch from json
+        setProjects(projectList);
         toast.error("Something went wrong while fetching the main projects");
       }
     } catch (error) {
+      setProjects(projectList);
       toast.error(error.message);
     }
   };
@@ -47,10 +52,7 @@ const Page2 = () => {
           {projects.length > 0 ? (
             projects.map((p) => (
               <div key={p._id} className="">
-                <div
-                  className="card bg-dark text-light rounded-5 proj-card mx-2 my-4 p-0"
-                  
-                >
+                <div className="card bg-dark text-light rounded-5 proj-card mx-2 my-4 p-0">
                   <img
                     src={p.img}
                     className="card-img-top rounded-top-5 p-0"
@@ -82,15 +84,25 @@ const Page2 = () => {
               </div>
             ))
           ) : (
-            <p>No projects to display</p>
+            <DNA
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+            // <p>No projects to display</p>
           )}
         </div>
-        <div className="text-center mt-4">
-          <Link to={"./projects"} className="show-all">
-            Show all
-            <MdOutlineKeyboardDoubleArrowDown size="20px" />
-          </Link>
-        </div>
+        {show && (
+          <div className="text-center mt-4">
+            <Link to={"./projects"} className="show-all">
+              Show all
+              <MdOutlineKeyboardDoubleArrowDown size="20px" />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

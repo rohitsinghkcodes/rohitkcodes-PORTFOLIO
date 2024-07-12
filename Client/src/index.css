@@ -48,3 +48,23 @@ h1::before {
     font-size: 8vw; /* Reduced font size */
   }
 }
+
+
+@media (max-width: 1024px) {
+ 
+  h1::before {
+    content: none;
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 3vw !important; /* Reduced font size */
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+
+  /* Adjustments for h1 */
+  h1 {
+    text-align: center;
+    font-size: 7vw; /* Reduced font size */
+  }
+}

@@ -44,6 +44,10 @@
   margin-right: 5vw;
 }
 
+.iconsize{
+  font-size: 24px;
+}
+
 /* Media query for phone screens */
 @media (max-width: 600px) {
   .intro {
@@ -86,5 +90,54 @@
 @media (min-width: 700px) {
   .intro-text {
     padding-right: 5vw;
+  }
+}
+
+
+/* Media query for phone screens */
+@media (max-width: 840px)and (min-width: 768px) {
+  .intro {
+    background-size: cover;
+    text-align: center;
+  }
+  .sm-container {
+    margin-top: 3vh;
+    text-align: center;
+  }
+  .iconsize{
+    font-size: 35px !important;
+    margin-left: 5vw ;
+    margin-right: 5vw;
+  }
+
+  
+  .svg {
+    width: 30px;
+    margin-top: 85vh;
+  }
+  
+
+  .page0 {
+    h4 {
+      margin-top: 3vw;
+      text-align: center;
+      font-size: 3vw;
+    }
+    h6 {
+      font-size: 3vw !important;
+    }
+  }
+
+  .page0 img {
+    width: 30vw;
+    margin: 2vw;
+  }
+  .page0 h1 {
+    font-size: 6vw; 
+    text-transform: uppercase;
+  }
+  .typeloop {
+    justify-content: center;
+    margin-bottom: 2vh;
   }
 }
