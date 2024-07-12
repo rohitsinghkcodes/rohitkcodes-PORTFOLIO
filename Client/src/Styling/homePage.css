@@ -1,0 +1,16 @@
+/* #######################
+HOMEPAGE CSS
+########################## */
+.page0,
+.page1,
+.page2,
+.page3 {
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px;
+}
+
+.page1,.page4{
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}

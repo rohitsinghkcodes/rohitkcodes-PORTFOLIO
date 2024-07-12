@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,700&family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plaster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #fff;
+}
+
+h6 {
+  font-size: 1.2vw !important;
+  margin-bottom: 30px;
+  color: rgba(245, 245, 245, 0.692);
+  font-family: "Poppins", sans-serif !important;
+}
+
+h1 {
+  font-size: 2.5vw;
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  color: greenyellow;
+}
+h1::before {
+  content: "— ";
+}
+
+/* Media query for phone screens */
+@media (max-width: 600px) {
+  /* Adjustments for h6 */
+  h1::before {
+    content: none;
+  }
+
+  h6 {
+    text-align: center;
+    font-size: 4vw !important; /* Reduced font size */
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+
+  /* Adjustments for h1 */
+  h1 {
+    text-align: center;
+    font-size: 8vw; /* Reduced font size */
+  }
+}

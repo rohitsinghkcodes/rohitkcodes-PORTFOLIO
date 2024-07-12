@@ -1,0 +1,29 @@
+/* *************** page 1 - Skills css ************* */
+.bg {
+    background-image: url(../../Images/bg1.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .skill-card {
+    background-color: rgb(27, 27, 27) !important;
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.5s ease, z-index 0.2s ease;
+    p {
+      color: rgba(255, 255, 255, 0.644);
+    }
+  }
+  
+  .skill-card img {
+    max-width: 60px;
+    max-height: 250px !important;
+    object-fit: cover;
+  }
+  
+  .skill-card:hover {
+    border: 1px solid greenyellow;
+    background-color: rgb(0, 0, 0) !important;
+    transform: scale(1.2);
+    z-index: 999;
+  }

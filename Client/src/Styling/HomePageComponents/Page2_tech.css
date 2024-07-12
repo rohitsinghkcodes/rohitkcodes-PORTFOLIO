@@ -1,0 +1,61 @@
+/* CSS for .ring */
+.ring {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 20%;
+  margin: 10px;
+  background-color: rgb(71, 71, 71);
+  transition: all 0.4s ease;
+}
+
+/* CSS for .ring2 */
+.ring2 {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 20%;
+  transition: all 0.5s ease-out;
+}
+
+.ring2 p {
+  text-align: center;
+  font-size: 0.8vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+.ring:hover {
+  transform: scale(1.2);
+  background-color: greenyellow;
+}
+
+.ring:hover .ring2 {
+  background-color: rgb(0, 0, 0);
+}
+.ring:hover .icon {
+  color: greenyellow;
+}
+
+/* Media query for phone screens */
+@media (max-width: 600px) {
+  .ring {
+    height: 60px;
+    width: 60px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .ring2 p {
+    font-size: 0.6rem; /* Reduced font size */
+  }
+}

@@ -1,0 +1,90 @@
+/* *************** page 0 - intro css ************* */
+.intro {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../Images/map.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.page0 h1 {
+  font-size: 4vw;
+  font-family: "Plaster", system-ui;
+  color: rgba(255, 255, 255, 0.952);
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+.page0 h1::before {
+  content: none;
+}
+
+/* Profile description */
+.typeloop {
+  display: flex;
+  span {
+    color: greenyellow;
+  }
+}
+
+.svg {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  margin-top: 80vh;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 1.5;
+}
+
+.smicon {
+  margin-right: 5vw;
+}
+
+/* Media query for phone screens */
+@media (max-width: 600px) {
+  .intro {
+    background-size: cover;
+    text-align: center;
+  }
+  .sm-container {
+    text-align: center;
+  }
+  .svg {
+    width: 20px;
+    margin-top: 85vh;
+  }
+
+  .page0 {
+    h4 {
+      margin-top: 4vw;
+      text-align: center;
+      font-size: 4vw;
+    }
+    h6 {
+      font-size: 4vw !important;
+    }
+  }
+
+  .page0 img {
+    width: 30vw;
+    margin: 2vw;
+  }
+  .page0 h1 {
+    font-size: 8vw; /* Reduced font size */
+    /* Adjusted margin */
+    text-transform: uppercase;
+  }
+  .typeloop {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 700px) {
+  .intro-text {
+    padding-right: 5vw;
+  }
+}

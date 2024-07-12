@@ -1,0 +1,52 @@
+/* ######################
+    FOOTER CSS
+######################### */
+.footer{
+  text-align: center;
+  background-color: rgb(14, 14, 24);
+  color:white
+}
+.text-info {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.678) !important;
+  transition: all 0.2s ease;
+}
+.text-info:hover {
+  color: greenyellow !important;
+}
+.connect {
+  h1:before {
+    content: none;
+  }
+  h1 {
+    margin-bottom: 4vh;
+  }
+}
+
+.copyright {
+  padding: 15px;
+  font-size: 2vh;
+  color: rgba(255, 255, 255, 0.678);
+  background-color:#000000 !important;
+}
+
+/* ##########################
+FOOTER CSS - Social Media 
+############################# */
+
+.social-icons {
+  color: white;
+  transition: transform 0.5s ease;
+}
+.social-icons:hover {
+  color: greenyellow;
+  transform: scale(1.4);
+}
+
+@media (max-width: 600px) {
+  .copyright {
+    font-size: 1.5vh;
+  }
+}
+
+

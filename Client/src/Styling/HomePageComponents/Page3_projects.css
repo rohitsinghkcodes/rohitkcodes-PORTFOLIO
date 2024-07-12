@@ -1,0 +1,62 @@
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+
+.proj-card {
+  background-color: #1b1b1b !important;
+  position: relative;
+  transition: transform 0.5s ease, z-index 0.2s ease;
+  max-width: 24rem;
+  min-width: 18rem;
+
+  img {
+    max-height: 250px !important;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transform: filter 5s ease !important;
+  }
+}
+
+
+.proj-card:hover {
+  border: 2px solid greenyellow;
+  background-color: rgb(0, 0, 0) !important;
+  transform: scale(1.2);
+  z-index: 999;
+
+  p{
+   font-size: 1vw; 
+  }
+  
+}
+
+
+.card-text {
+  color: rgba(255, 255, 255, 0.712);
+  overflow: hidden;
+}
+
+.show-all{
+  text-decoration: none;
+  color: greenyellow;
+  
+}
+.show-all:hover{
+  color: rgb(144, 233, 11);
+}
+
+
+
+@media (max-width:600px) {
+
+  .proj-card p{
+      font-size: 3vw !important;
+  }
+
+  .proj-card:hover{
+    pointer-events: none;
+  }
+}
