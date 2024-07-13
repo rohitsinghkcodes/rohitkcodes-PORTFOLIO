@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
-import Layout from "../Components/Layouts/Layout";
+import Layout2 from "../Components/Layouts/Layout2.js";
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -30,7 +30,7 @@ const AllProjects = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout2>
       <div className="page3 bg-img" id="scrollspyHeading2">
         <div className="container">
           <h1> My Projects</h1>
@@ -46,10 +46,7 @@ const AllProjects = () => {
             {projects.length > 0 ? (
               projects.map((p) => (
                 <div key={p._id} className="">
-                  <div
-                    className="card bg-dark text-light rounded-5 proj-card mx-2 my-4 p-0"
-                    
-                  >
+                  <div className="card bg-dark text-light rounded-5 proj-card mx-2 my-4 p-0">
                     <img
                       src={p.img}
                       className="card-img-top rounded-top-5 p-0"
@@ -86,7 +83,7 @@ const AllProjects = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

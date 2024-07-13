@@ -2,13 +2,13 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import { Button, Drawer } from "antd";
+import {  Drawer } from "antd";
 import { IoHome } from "react-icons/io5";
 import { FaTools, FaToolbox } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
-const Header = () => {
+const HomeHeader = () => {
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     open ? setOpen(false) : setOpen(true);
@@ -126,4 +126,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeHeader;

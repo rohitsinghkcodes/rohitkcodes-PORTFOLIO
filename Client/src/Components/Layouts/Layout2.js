@@ -1,9 +1,9 @@
 import React from "react";
 import Footer from "./Footer.js";
-import HomeHeader from "./HomeHeader.js";
+import Header2 from "./Header2.js";
 import { Helmet } from "react-helmet";
 
-const Layout = (props) => {
+const Layout2 = (props) => {
   return (
     <div>
       <Helmet>
@@ -13,23 +13,22 @@ const Layout = (props) => {
         <meta name="author" content={props.author} />
         <title>{props.title}</title>
       </Helmet>
-      <HomeHeader />
+      <Header2 />
 
       <main className="main-style" style={{ minHeight: "65vh" }}>
-        
         {props.children}
       </main>
 
-    <Footer/>
+      <Footer />
     </div>
   );
 };
 
-Layout.defaultProps = {
+Layout2.defaultProps = {
   title: "E-Commerce App",
   description: "Mern Stack E-Commerce Web App",
   keywords: "mongodb, express, ract, node, webapp, mern, ecommerce, shopping",
   author: "rohit_kumar_singh",
 };
 
-export default Layout;
+export default Layout2;

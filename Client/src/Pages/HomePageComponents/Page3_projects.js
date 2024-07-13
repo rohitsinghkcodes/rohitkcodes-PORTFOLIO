@@ -10,7 +10,7 @@ import { projectList } from "../../Helpers/projectList.js";
 import { DNA } from "react-loader-spinner";
 
 const Page2 = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(projectList);
   const [show, setShow] = useState(false);
 
   const fetchMainProjects = async () => {
@@ -23,11 +23,10 @@ const Page2 = () => {
         setProjects(response.data.projects);
       } else {
         // if not fetched from the api-fetch from json
-        setProjects(projectList);
+
         toast.error("Something went wrong while fetching the main projects");
       }
     } catch (error) {
-      setProjects(projectList);
       toast.error(error.message);
     }
   };
