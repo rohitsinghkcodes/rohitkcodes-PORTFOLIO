@@ -16,7 +16,7 @@ const Page2 = () => {
   const fetchMainProjects = async () => {
     try {
       const response = await axios.get(
-        "https://rohitkcodes-server.onrender.com/api/projects/main-projects"
+        "https://rohitkcodes-portfolio.onrender.com/api/projects/main-projects"
       );
       if (response.data.success) {
         setShow(true);
