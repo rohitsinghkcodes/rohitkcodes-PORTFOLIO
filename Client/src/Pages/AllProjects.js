@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import Layout2 from "../Components/Layouts/Layout2.js";
+import { Carousel } from "antd";
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -32,6 +33,60 @@ const AllProjects = () => {
   return (
     <Layout2>
       <div className="page3 bg-img" id="scrollspyHeading2">
+        <Carousel autoplay>
+          <div>
+            <h3
+              style={{
+                height: "400px",
+                color: "#fff",
+                lineHeight: "160px",
+                textAlign: "center",
+                background: "#364d79",
+              }}
+            >
+              1
+            </h3>
+          </div>
+          <div>
+            <h3
+              style={{
+                height: "400px",
+                color: "#fff",
+                lineHeight: "160px",
+                textAlign: "center",
+                background: "#364d79",
+              }}
+            >
+              2
+            </h3>
+          </div>
+          <div>
+            <h3
+              style={{
+                height: "400px",
+                color: "#fff",
+                lineHeight: "160px",
+                textAlign: "center",
+                background: "#364d79",
+              }}
+            >
+              3
+            </h3>
+          </div>
+          <div>
+            <h3
+              style={{
+                height: "400px",
+                color: "#fff",
+                lineHeight: "160px",
+                textAlign: "center",
+                background: "#364d79",
+              }}
+            >
+              4
+            </h3>
+          </div>
+        </Carousel>
         <div className="container">
           <h1> My Projects</h1>
           <h6>

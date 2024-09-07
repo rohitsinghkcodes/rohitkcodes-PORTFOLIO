@@ -1,11 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import colors from "colors";
-import dotenv from "dotenv";
 import connectDB from "./Config/dbConnection.js";
 import projectRoute from "./Routes/projectRoute.js";
+import serviceRoute from "./Routes/serviceRoute.js";
 import cors from "cors";
-
-dotenv.config();
 
 connectDB();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/projects", projectRoute);
+app.use("/api/services", serviceRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome to server");
