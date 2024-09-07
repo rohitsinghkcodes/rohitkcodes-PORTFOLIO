@@ -15,12 +15,12 @@ export const sendMailController = async (req, res) => {
     debug: true, // Enable debug output
     logger: true, // Log to console
   });
-
+  const userName = name.replace(/\b\w/g, (char) => char.toUpperCase());
   try {
     const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_TO,
-      subject: `${name} has send you a message from rohitkcodes.`,
+      subject: `${userName} has send you a message from rohitkcodes.`,
       html: `
       <!DOCTYPE html>
       <html lang="en">
@@ -43,7 +43,7 @@ export const sendMailController = async (req, res) => {
           </style>
       </head>
       <body>
-          <h4>New message from ${name}, sent from rohitkcodes portfolio website:</h4>
+          <h4>New message from ${userName}, sent from rohitkcodes portfolio website:</h4>
           <table>
               <tr>
                   <th>Field</th>
@@ -51,7 +51,7 @@ export const sendMailController = async (req, res) => {
               </tr>
               <tr>
                   <td><strong>User Name</strong></td>
-                  <td>${name}</td>
+                  <td>${userName}</td>
               </tr>
               <tr>
                   <td><strong>User Email</strong></td>
