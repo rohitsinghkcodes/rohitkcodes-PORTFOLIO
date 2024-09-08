@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import { Drawer } from "antd";
 import { IoClose } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const Header2 = () => {
   const [open, setOpen] = useState(false);
@@ -12,6 +13,7 @@ const Header2 = () => {
   };
   const onClose = () => {
     setOpen(false);
+    toast.info("Curently Not Available");
   };
   return (
     <>
@@ -41,11 +43,7 @@ const Header2 = () => {
             zIndex={2000}
           >
             <div className="drawer-content">
-              <a
-                className="drawer-link"
-                href="https://github.com/rohitsinghkcodes/RESOURCES/raw/master/portfolio/Rohit_Kumar_Resume.pdf"
-                onClick={onClose}
-              >
+              <a className="drawer-link" onClick={onClose}>
                 <FaDownload />
                 &ensp;Resume
               </a>
@@ -57,7 +55,9 @@ const Header2 = () => {
               <li className="nav-item">
                 <a
                   className="resume-btn btn btn-outline"
-                  href="https://github.com/rohitsinghkcodes/RESOURCES/raw/master/portfolio/Rohit_Kumar_Resume.pdf"
+                  onClick={() => {
+                    toast.info("Curently Not Available");
+                  }}
                 >
                   <FaDownload /> &nbsp; Resume
                 </a>

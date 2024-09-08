@@ -2,11 +2,12 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import {  Drawer } from "antd";
+import { Drawer } from "antd";
 import { IoHome } from "react-icons/io5";
 import { FaTools, FaToolbox } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const HomeHeader = () => {
   const [open, setOpen] = useState(false);
@@ -15,6 +16,7 @@ const HomeHeader = () => {
   };
   const onClose = () => {
     setOpen(false);
+    toast.info("Curently Not Available");
   };
   return (
     <>
@@ -77,11 +79,7 @@ const HomeHeader = () => {
                 <IoMdMail />
                 &ensp;Connect
               </a>
-              <a
-                className="drawer-link"
-                href="https://github.com/rohitsinghkcodes/RESOURCES/raw/master/portfolio/Rohit_Kumar_Resume.pdf"
-                onClick={onClose}
-              >
+              <a className="drawer-link" href="" onClick={onClose}>
                 <FaDownload />
                 &ensp;Resume
               </a>
@@ -113,7 +111,10 @@ const HomeHeader = () => {
               <li className="nav-item">
                 <a
                   className="resume-btn btn btn-outline"
-                  href="https://github.com/rohitsinghkcodes/RESOURCES/raw/master/portfolio/Rohit_Kumar_Resume.pdf"
+                  href="#"
+                  onClick={() => {
+                    toast.info("Curently Not Available");
+                  }}
                 >
                   <FaDownload /> &nbsp; Resume
                 </a>
