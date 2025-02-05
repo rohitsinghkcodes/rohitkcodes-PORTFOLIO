@@ -10,10 +10,10 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const sendMessage = async () => {
-    setLoading(true); // Set loading to true when starting to send the message
+    setLoading(true);
     try {
       const res = await axios.post(
-        "https://rohitkcodes-portfolio.onrender.com/api/services/send-mail",
+        `${process.env.REACT_APP_API_URL}/api/services/send-mail`,
         { name: name, email: email, message: message }
       );
       if (res) {
@@ -23,7 +23,9 @@ const Contact = () => {
         setMessage("");
       }
     } catch (error) {
-      toast.error("Failed to send mail.");
+      toast.error(
+        "Unable to send mail at the moment.\n\n Please try again after sometime."
+      );
     } finally {
       setLoading(false); // Reset loading state after operation is complete
     }

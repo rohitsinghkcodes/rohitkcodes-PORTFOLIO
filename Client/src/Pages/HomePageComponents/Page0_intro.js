@@ -2,10 +2,15 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import dp from "../../Images/img2.png";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedinIn, FaGithub,FaPinterest } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+  FaLinkedin,
+  FaPinterest,
+} from "react-icons/fa";
 import { SMLinks } from "../../Helpers/socialMediaLinks.js";
 import "../../Styling/HomePageComponents/Page0_intro.css";
-
 
 const Page0 = () => {
   const skillSet = [
@@ -46,17 +51,17 @@ const Page0 = () => {
             </h6>
             {/* Social Media */}
             <div className="sm-container">
-              <Link to={SMLinks.instagram}>
-                <FaInstagram className="social-icons iconsize smicon" />
+              <Link to={SMLinks.linkedin} target="_blank">
+                <FaLinkedin className="social-icons iconsize smicon" />
               </Link>
-              <Link to={SMLinks.linkedin}>
-                <FaLinkedinIn className="social-icons iconsize smicon" />
-              </Link>
-              <Link to={SMLinks.github}>
+              <Link to={SMLinks.github} target="_blank">
                 <FaGithub className="social-icons iconsize smicon" />
               </Link>
-              <Link to={SMLinks.github}>
-                <FaPinterest  className="social-icons iconsize" />
+              <Link to={SMLinks.instagram} target="_blank">
+                <FaInstagram className="social-icons iconsize smicon" />
+              </Link>
+              <Link to={SMLinks.github} target="_blank">
+                <FaPinterest className="social-icons iconsize" />
               </Link>
             </div>
           </div>

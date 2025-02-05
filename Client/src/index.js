@@ -19,8 +19,7 @@ root.render(
   <BrowserRouter>
     <ToastContainer
       position="top-center"
-      autoClose={1500}
-      hideProgressBar
+      autoClose={5000}
       newestOnTop
       closeOnClick
       rtl={false}
@@ -28,7 +27,7 @@ root.render(
       draggable
       pauseOnHover={false}
       theme="dark"
-      width="350px"
+      style={{fontSize:"14px" }}
     />
     <Tooltip
       id="my-tooltip"

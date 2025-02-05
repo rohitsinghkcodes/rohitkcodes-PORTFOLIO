@@ -1,26 +1,15 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export const sendMailController = async (req, res) => {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { name, email, message } = req.body;
-
-  // Create a transporter using Outlook SMTP
-  const transporter = nodemailer.createTransport({
-    host: "smtp.office365.com", // Outlook SMTP server
-    port: 587,
-    secure: false, // Set to false because port 587 is being used
-    auth: {
-      user: process.env.EMAIL_USER, // Your Outlook email address
-      pass: process.env.EMAIL_PASS, // Your Outlook email password or app-specific password
-    },
-    debug: true, // Enable debug output
-    logger: true, // Log to console
-  });
   const userName = name.replace(/\b\w/g, (char) => char.toUpperCase());
+
   try {
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO,
-      subject: `${userName} has send you a message from rohitkcodes.`,
+    const response = await resend.emails.send({
+      from: `${process.env.EMAIL_FROM}`, 
+      to: `${process.env.EMAIL_TO}`, 
+      subject: `${userName} has sent you a message from rohitkcodes.`,
       html: `
       <!DOCTYPE html>
       <html lang="en">
@@ -68,10 +57,21 @@ export const sendMailController = async (req, res) => {
       `,
     });
 
-    console.log("Message sent: %s", info.messageId);
-    res.status(200).json({ message: "Email sent successfully" });
+    console.log("mail-response---", response.data);
+
+    if (response.data.id) {
+      res
+        .status(200)
+        .send({ success: true, message: "Email sent successfully" });
+    } else {
+      throw new Error("Failed to send email");
+    }
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ error: "Failed to send email" });
+    console.error("Email sending error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to send email",
+      error: error.message,
+    });
   }
 };

@@ -1,5 +1,5 @@
 export const SMLinks = {
-  instagram: "#",
+  instagram: "https://www.instagram.com/im.rohh.singh/?igsh=MW50eGg0YzBobDRo#",
   linkedin: "https://www.linkedin.com/in/rohit5swd/",
   twitter: "#",
   github: "https://github.com/rohitsinghkcodes",
