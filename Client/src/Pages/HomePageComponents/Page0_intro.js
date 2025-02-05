@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import dp from "../../Images/img2.png";
+import dp from "../../Images/img1.png";
 import { Link } from "react-router-dom";
 import {
   FaInstagram,
