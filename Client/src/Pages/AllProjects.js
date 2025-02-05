@@ -7,6 +7,10 @@ import { MdOpenInNew } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import Layout2 from "../Components/Layouts/Layout2.js";
 import { Carousel } from "antd";
+import img1 from "../Images/ss1.png";
+import img2 from "../Images/ss2.png";
+import img3 from "../Images/ss3.png";
+import img4 from "../Images/ss4.png";
 
 const AllProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -33,58 +37,50 @@ const AllProjects = () => {
   return (
     <Layout2>
       <div className="page3 bg-img" id="scrollspyHeading2">
-        <Carousel autoplay>
+        <Carousel autoplay className="crousel">
           <div>
-            <h3
+            <img
+              src={img1}
+              alt=""
               style={{
-                height: "400px",
-                color: "#fff",
-                lineHeight: "160px",
-                textAlign: "center",
-                background: "#364d79",
+                width: "100%",
+                height: "50vh",
+                objectFit: "fill",
               }}
-            >
-              1
-            </h3>
+            />
           </div>
           <div>
-            <h3
+            <img
+              src={img2}
+              alt=""
               style={{
-                height: "400px",
-                color: "#fff",
-                lineHeight: "160px",
-                textAlign: "center",
-                background: "#364d79",
+                width: "100%",
+                height: "50vh",
+                objectFit: "fill",
               }}
-            >
-              2
-            </h3>
+            />
           </div>
           <div>
-            <h3
+            <img
+              src={img3}
+              alt=""
               style={{
-                height: "400px",
-                color: "#fff",
-                lineHeight: "160px",
-                textAlign: "center",
-                background: "#364d79",
+                width: "100%",
+                height: "50vh",
+                objectFit: "fill",
               }}
-            >
-              3
-            </h3>
+            />
           </div>
           <div>
-            <h3
+            <img
+              src={img4}
+              alt=""
               style={{
-                height: "400px",
-                color: "#fff",
-                lineHeight: "160px",
-                textAlign: "center",
-                background: "#364d79",
+                width: "100%",
+                height: "50vh",
+                objectFit: "fill",
               }}
-            >
-              4
-            </h3>
+            />
           </div>
         </Carousel>
         <div className="container">
